@@ -139,3 +139,48 @@ body {
     background-color: #fff;
   }
   
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .filters {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .filters button {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filters button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Responsivuus */
+  @media only screen and (max-width: 600px) {
+    .container {
+      max-width: 100%;
+      padding: 10px;
+    }
+  
+    .input-container {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .input-container input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
