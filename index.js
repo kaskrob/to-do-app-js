@@ -25,7 +25,6 @@ $(document).ready(function() {
     taskList.appendChild(taskItem);
   }
 
-  // Function to add a new task
   function addTask() {
     const taskContent = taskInput.value.trim();
     if (taskContent !== "") {
@@ -34,13 +33,11 @@ $(document).ready(function() {
     }
   }
 
-  // Function to toggle task completion
   function toggleTask() {
     this.dataset.completed = this.dataset.completed === "true" ? "false" : "true";
     this.classList.toggle("completed");
   }
 
-  // Event listener for adding a new task
   addTaskBtn.addEventListener("click", addTask);
 
   // Optional: You can add the functionality to add tasks by pressing Enter key
@@ -50,12 +47,10 @@ $(document).ready(function() {
     }
   });
 
-  // Dark mode toggle
   themeToggle.addEventListener("change", function() {
     document.body.classList.toggle("dark-mode");
   });
 
-  // Drag & drop reordering
   Sortable.create(taskList, {
     animation: 150,
     ghostClass: 'ghost',
@@ -66,7 +61,6 @@ $(document).ready(function() {
     }
   });
 
-  // Filter tasks
   allFilter.addEventListener("click", function() {
     taskList.querySelectorAll('.task-item').forEach(task => {
       task.style.display = "block";
