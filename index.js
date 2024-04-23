@@ -93,12 +93,5 @@ $(document).ready(function() {
     });
   });
 
-  // Clear completed tasks
-  clearCompleted.addEventListener("click", function() {
-    taskList.querySelectorAll('.task-item').forEach(task => {
-      if (task.dataset.completed === "true") {
-        task.remove();
-      }
-    });
-  });
-});
+var clearBtn = document.getElementById("clear");
+
