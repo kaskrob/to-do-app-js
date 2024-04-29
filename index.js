@@ -8,7 +8,7 @@ $(document).ready(function() {
   const completedFilter = document.getElementById("completedFilter");
   const clearCompleted = document.getElementById("clearCompleted");
 
-  // Function to create a new task item
+  
   function createTaskItem(taskContent) {
     const taskItem = document.createElement("li");
     taskItem.className = "task-item";
