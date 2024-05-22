@@ -1,38 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do App</title>
-  <link rel="stylesheet" href="layout.css">
-  <link rel="stylesheet" href="index.js">
-  <link rel="stylesheet" href="script.js">
-  <script src="script.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-</head>
-<body>
-	<div class="container">
-		<div class="header">
-		  <h1>To-Do List</h1>
-		  <label class="switch">
-			<input type="checkbox" id="themeToggle">
-			<span class="slider round"></span>
-		  </label>
-		</div>
-		<div class="input-container">
-		  <input type="text" id="taskInput" placeholder="Add new task...">
-		  <button id="addTaskBtn">Add Task</button>
-		</div>
-		<ul id="taskList" class="sortable"></ul>
-		<div class="filters">
-		  <button id="allFilter">All</button>
-		  <button id="activeFilter">Active</button>
-		  <button id="completedFilter">Completed</button>
-		  <button id="clearCompleted">Clear Completed</button>
-		</div>
-	  </div>
-	
-	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
-</body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Todo app</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="./layout.css" />
+    <link id="theme-style" rel="stylesheet" type="text/css" href="" />
+  </head>
+  <body>
+    <header class="">
+      <h1>TODO 2024</h1>
+      <button class="dark-theme" id="dark-theme-btn">
+        <img src="./images/icon-moon.svg" alt="Change theme color" />
+      </button>
+      <button class="light-theme" id="light-theme-btn">
+        <img src="./images/icon-sun.svg" alt="Change theme color" />
+      </button>
+    </header>
+
+    <main>
+      <div class="card add">
+        <div class="">
+          <button id="add-btn">
+            <i class="fas fa-plus" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="txt-container">
+          <input
+            type="text"
+            class=""
+            placeholder="Create a new todo..."
+            spellcheck="false"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+      <ul class="todos">
+      </ul>
+      <div class="card stats">
+        <p class=""><span id="items-left">0</span> items left</p>
+        <div class="filter">
+          <button id="all" class="active">All</button>
+          <button id="active">Active</button>
+          <button id="completed">Completed</button>
+        </div>
+        <div class="corner">
+          <button id="clear">Clear Completed</button>
+        </div>
+      </div>
+      <div class="card m-filter">
+        <button id="m-all" class="active">All</button>
+        <button id="m-active">Active</button>
+        <button id="m-completed">Completed</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>Drag and drop to reorder list</p>
+    </footer>
+    <div class="attribution">
+      >. Coded by
+      <a href=>Robert</a>.
+    </div>
+    <script src="toggleTheme.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
