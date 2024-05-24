@@ -320,4 +320,4 @@ function updateTodosOrder() {
 }
 
 renderTodoList();
-updateItemsLeft()
+updateItemsLeft();
